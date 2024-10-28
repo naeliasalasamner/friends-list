@@ -1,0 +1,61 @@
+<% content_for :title, "Friends" %>
+
+<% if user_signed_in? %>
+
+<table class="table table-striped table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+      <th>User Id</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @friends.each do |friend| %>
+      <% if friend.user == current_user %>
+      <tr>
+        <td>
+        <%= link_to friend.first_name + ' ' + friend.last_name, friend %>
+        </td>
+        <td><%= friend.email %></td>
+        <td><%= friend.phone %></td>
+        <td><%= friend.twitter%></td>
+        <td><%= friend.user_id%></td>
+        <td>
+          <%= link_to "Delete", friend, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger btn-sm" %>
+        </td>
+      </td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New friend", new_friend_path, class: "btn btn-success mt-3" %>
+
+<% else %>
+<div class="container mt-5">
+  <div class="jumbotron text-center bg-light p-5 mb-4">
+    <h1 class="display-4">Hello Ruby, I love you!</h1>
+    <p class="lead">This is my first Rails webpage.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Learning Ruby on Rails</h5>
+      <p class="card-text">
+        This is the first Ruby on Rails app I created, and it has been an amazing learning experience! I found it really enjoyable and surprisingly simple to get started with Ruby. The framework made it incredibly fast to set up a database and get things running. Rails truly lives up to its reputation for developer-friendly design.
+      </p>
+
+      <p class="card-text">
+        <strong>Sign up or in to create your own friends list!</strong>
+      </p>
+    </div>
+  </div>
+</div>
+
+<% end %>
