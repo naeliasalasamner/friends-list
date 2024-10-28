@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 
-gem "rails", "~> 8.0.0.beta1"
+ruby '3.0.0'
+
+gem "rails", "~> 7.0.0"
 gem "propshaft"
 gem "puma", ">= 5.0"
 gem "importmap-rails"
@@ -33,4 +35,5 @@ end
 group :test do
   gem "capybara"
   gem "selenium-webdriver"
+  gem "sqlite3", ">= 2.1"
 end
