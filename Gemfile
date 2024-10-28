@@ -14,6 +14,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
+gem "browser", "~> 5.3"
 
 gem "bootsnap", require: false
 
@@ -21,7 +22,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ], require: "debug/prelude"
   gem "brakeman", require: false
   gem "rubocop-rails-omakase", require: false
-  gem "sqlite3", ">= 2.1"
+  gem "sqlite3", "~> 1.4"
 end
 
 group :development do
