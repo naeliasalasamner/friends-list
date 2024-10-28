@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby '3.2.2'
+ruby "3.2.2"
 
 gem "rails", "~> 7.0.0"
 gem "propshaft"
@@ -9,11 +9,11 @@ gem "importmap-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
 gem "jbuilder"
-gem 'devise', '~> 4.9', '>= 4.9.4'
+gem "devise", "~> 4.9", ">= 4.9.4"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
-gem 'solid_cache'
-gem 'solid_queue'
-gem 'solid_cable'
+gem "solid_cache"
+gem "solid_queue"
+gem "solid_cable"
 
 gem "bootsnap", require: false
 
