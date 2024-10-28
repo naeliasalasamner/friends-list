@@ -32,8 +32,8 @@ group :development do
   gem "sqlite3", ">= 2.1"
 end
 
-group :production to
-gem "pg", "~> 1.5", ">= 1.5.9"
+group :production do
+  gem "pg", "~> 1.5", ">= 1.5.9"
 end
 
 group :test do
