@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby '3.0.0'
+ruby '3.3.5'
 
 gem "rails", "~> 7.0.0"
 gem "propshaft"
@@ -35,5 +35,4 @@ end
 group :test do
   gem "capybara"
   gem "selenium-webdriver"
-  gem "sqlite3", ">= 2.1"
 end
