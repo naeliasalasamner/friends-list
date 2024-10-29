@@ -14,7 +14,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "solid_cache"
 gem "solid_queue"
 gem "solid_cable"
-gem "browser", "~> 5.3"
+gem "browser", "~> 6.0"
 
 gem "bootsnap", require: false
 
