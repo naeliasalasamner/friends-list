@@ -22,7 +22,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ], require: "debug/prelude"
   gem "brakeman", require: false
   gem "rubocop-rails-omakase", require: false
-  gem "sqlite3", "~> 1.4"
+  gem "sqlite3", "~> 2.1"
 end
 
 group :development do
